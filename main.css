@@ -3,12 +3,7 @@
 }
 
 html, body {
-    height: 100%;
     font-family: 'Lucida Fax Regular';
-}
-
-#skillsFooter {
-    position: absolute;
 }
 
 .center {
@@ -17,9 +12,9 @@ html, body {
 }
 
 #bulletSeperator {
-    font-size: 6vw;
+    font-size: 5vw;
     position: relative;
-    top: 1vh;
+    top: 1vw;
 }
 
 .icon {
@@ -41,6 +36,7 @@ header {
     flex-direction: column;
     background-color: rgb(124, 124, 124);
     font-family: 'Lucida Fax Regular';
+    height: 20.5vw;
 }
 
 #headerH1Holder {
@@ -52,18 +48,17 @@ header {
 #headerH1Holder > h1 {
     text-align: center;
     font-size: 5vw;
-    margin-bottom: 5px;
+    margin-bottom: 2.5px;
 }
 
 header > h2 {
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin-top: 2.5px;
+    margin-bottom: 5px;
     font-size: 3vw;
 }
 
 nav {
-    height: 4vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -72,18 +67,23 @@ nav {
 }
 
 .navButton {
+    height: 4vw;
     width: 20%;
     background-color: rgb(39, 39, 39);
     color: white;
-    font-size: 3vw;
+    font-size: 3.5vw;
     border: none;
     text-align: center;
-    margin-top: auto;
+    margin-top: -7.5px;
     margin-bottom: auto;
     text-decoration: none;
 }
 .navButton:hover {
     cursor: pointer;
+}
+
+.navActive {
+    background-color: rgb(75, 75, 75);
 }
 
 h3 {
@@ -95,21 +95,23 @@ h3 {
 
 li {
     font-family: 'Lucida Sans Regular';
-    font-size: 3vw;
-    line-height: 10vh;
+    font-size: 5vw;
+    line-height: 8vw;
     margin-left: 5px;
     margin-right: 20px;
     text-indent: -30px;
     list-style-position: inside;
+    margin-bottom: 3vw;
 }
 
 p {
     font-family: 'Lucida Sans Regular';
-    font-size: 2vw;
-    text-indent: 15px;
+    font-size: 4vw;
+    text-indent: 20px;
     line-height: 4vh;
     margin-left: 20px;
     margin-right: 20px;
+    padding-bottom: 100px;
 }
 
 #andrewpicture {
@@ -124,7 +126,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     width: 100%;
     margin-bottom: 0px;
@@ -137,9 +139,8 @@ footer {
 #projectImage {
     float: right;
     width: 30%;
-    margin-right: 10px;
+    margin-right: 10%;
     margin-left: 10px;
-    margin-right: 20px;
 }
 
 .projectNav > img {
@@ -149,11 +150,11 @@ footer {
 }
 
 .projectNav {
-    position: absolute;
     bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 100%;
 }
 
 h4 {
@@ -168,14 +169,14 @@ h4 {
     margin-right: 20px;
 }
 
+#projectDescription {
+    padding-bottom: 0px;
+}
+
 #projectDescription::after {
     content: "";
     clear: both;
     display: table;
-}
-
-#projectsFooter {
-    position: absolute;
 }
 
 /* Tablet */
@@ -187,6 +188,19 @@ h4 {
 
     .projectNav {
         margin-bottom: 50px;
+    }
+
+    p {
+        font-size: 3.5vw;
+        line-height: 5vw;
+    }
+
+    header {
+        height: 19vw;
+    }
+
+    li {
+        font-size: 3.5vw;
     }
 
 }
@@ -202,7 +216,6 @@ h4 {
     }
 
     .projectNav {
-        max-width: 70%;
         justify-content: center;
     }
 
@@ -215,11 +228,12 @@ h4 {
     }
 
     #headerH1Holder > h1 {
-        font-size: 2vw;
+        font-size: 2.5vw;
+        margin-top: 5px;
     }
 
     #headerH1Holder {
-        width: 25%;
+        width: 30%;
     }
 
     header > h2 {
@@ -227,22 +241,18 @@ h4 {
     }
 
     h3 {
-        font-size: 2vw;
+        font-size: 3vw;
         margin-left: 25px;
     }
 
-    p {
-        font-size: 1vw;
-        line-height: 3.75vh;
-        text-indent: 45px;
-    }
-
     li {
-        font-size: 2vw;
+        font-size: 1.5vw;
+        margin-bottom: 2vw;
+        line-height: normal;
     }
 
     #andrewpicture {
-        width: 15%;
+        width: 30%;
     }
 
     #arrowNavHolder {
@@ -274,56 +284,28 @@ h4 {
         margin-right: 25px;
     }
 
-    #projectImage {
-        width: 20%;
-    }
-
     #bulletSeperator {
-        font-size: 3vw;
-        position: relative;
-        bottom: 0;
+        font-size: 2vw;
+        top: .5vw;
     }
 
-}
-
-@media screen and (max-aspect-ratio: 320/640) and (orientation: portrait) {
-    #bioFooter {
-        position: absolute;
+    p {
+        font-size: 1.5vw;
+        line-height: 3vw;
+        text-indent: 45px;
     }
-}
 
-@media screen and (max-aspect-ratio: 425/785) and (orientation: portrait) and (min-width: 375px) {
-    #bioFooter {
-        position: absolute;
+    header {
+        height: 8vw;
     }
-}
 
-@media screen and (max-aspect-ratio: 768/1005) and (orientation: portrait) and (min-width: 426px) {
-    #bioFooter {
-        position: absolute;
+    .navButton {
+        height: 2vw;
+        font-size: 1.75vw;
     }
-}
 
-@media screen and (max-aspect-ratio: 1024/1280) and (orientation: portrait) and (min-width: 1000px) {
-    #bioFooter {
-        position: absolute;
+    #projectDescription {
+        padding-bottom: 100px;
     }
-}
 
-@media screen and (max-aspect-ratio: 1440/512) and (min-width: 1400px) {
-    #bioFooter {
-        position: absolute;
-    }
-}
-
-@media screen and (max-aspect-ratio: 1100/390) and (min-width: 1100px) {
-    #bioFooter {
-        position: absolute;
-    }
-}
-
-@media screen and (min-width: 2560px) {
-    #bioFooter {
-        position: absolute;
-    }
 }
